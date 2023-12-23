@@ -1,0 +1,182 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  /* main css */
+.main-container{
+    padding: 50px 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    max-width:100%;
+}
+    #head1{
+font-size:40px; 
+font-weight: 700;
+width: fit-content;
+padding: 20px;
+    }
+    #head2{
+        padding: 8px 10px 10px 20px;
+        font-size: 16px;
+    }
+    
+    #mobile-head2{
+      visibility: hidden;
+    }
+
+  #form-container{
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.10);
+    width: 100%;
+    height: 579px;
+    padding: 44px 40px;
+  }
+
+  input[type] {
+    border: 1px solid var(--CL-Gray-3, #F0F0F0);
+    cursor: pointer;
+  }
+  #form-container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form .user-details .input-box{
+    width: calc(100% / 2 - 20px);
+}
+
+.input-box{
+  padding: 2px;
+}
+.user-details .input-box input{
+    height: 48px;
+    width: 238px;
+    max-width: 100%;
+}
+.user-details2 .input-box2{
+    width: calc(100% / 2 - 20px);
+    padding: 15px 0px;
+}
+#itt{
+    width: 500px;
+    height: 48px;
+    
+}
+#gender{
+    padding: 10px 0px;
+    width: 225px;
+    height:48px ;
+    border: 1px solid var(--CL-Gray-3, #F0F0F0);
+    border-radius: 4px;
+
+}
+  button {
+    width: 500px;
+    height: 48px;
+    color: white; 
+    border: none;
+    cursor: pointer;
+    background-color: var(--CL-Green, #2EC4B6);
+  }
+  p{
+    padding-top: 3px;
+  }
+  span{
+    color: var(--CL-Green, #2EC4B6);
+    text-decoration: underline;
+  }
+
+
+  @media (max-width:480px) {
+    .main-container{
+      padding:  30px 0px;
+      display: inline;
+      background: #F7FDFC;
+
+    }
+    #logo{
+      padding: 0px 24px;
+    }
+    #head1{
+      font-size: 20px;
+      padding: 0px 24px;
+    }
+    #head2{
+      visibility: hidden;
+    }
+    #mobile-head2{
+    visibility: visible;
+    position: relative;
+    bottom: 120px;
+    padding: 10px 24px;
+    }
+    #form-container{
+      border: none;
+      margin: 0px 24px;
+      width: 327px;
+      height: 870px;
+    }
+    #form-container form .user-details{
+      display: block;
+      width: 595px;
+
+    }
+
+    /* form{
+      padding: unset;
+    } */
+    #itt{
+      width: 240px;
+      height: 48px;
+      padding: 0px;
+    }
+    button{
+      width: 240px;
+      height: 48px;
+    }
+    p{
+      text-align: center;
+    }
+  }
